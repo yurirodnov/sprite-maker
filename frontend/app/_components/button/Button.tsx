@@ -1,8 +1,9 @@
-import styles from "./Button.module.css"
+import styles from "./Button.module.css";
 
-export const Button = () => {
-
-
-
-    return <button className={styles.button}>Button</button>
+interface ButtonProps {
+  name: string;
 }
+
+export const Button = ({ name }: ButtonProps) => {
+  return <button className={styles.button}>{name}</button>;
+};

@@ -1,9 +1,11 @@
 // sprite-maker/frontend/app/layout.tsx
 
 import type { Metadata } from "next";
+import { EditorContextProvider } from "./_context/EditorContext";
 import { Header } from "./_components/header/Header";
-import "./globals.css";
 import { Footer } from "./_components/footer/Footer";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Sprite maker",
@@ -18,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="body">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <EditorContextProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </EditorContextProvider>
       </body>
     </html>
   );
