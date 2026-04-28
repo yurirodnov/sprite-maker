@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { EditorContextProvider } from "./_context/EditorContext";
 import { Header } from "./_components/header/Header";
 import { Footer } from "./_components/footer/Footer";
-
 import "./globals.css";
 
 export const metadata: Metadata = {
